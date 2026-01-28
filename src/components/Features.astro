@@ -1,0 +1,74 @@
+---
+const cases = [
+  {
+    client: 'Maior Visibilidade',
+    type: 'Alcance',
+    desc: 'Cada atração do seu parque aparecerá como resultado de pesquisa relevante no Google Maps, saindo da sombra da vegetação fechada.',
+    testimonial: '"Atrações visíveis individualmente facilitam a descoberta."',
+    author: 'Google Maps',
+    image: '/visibilidade.png',
+    link: '#'
+  },
+  {
+    client: 'SEO Orgânico',
+    type: 'Ranqueamento',
+    desc: 'Domine as buscas locais. Garanta que suas atrações específicas (ex: "Cachoeira do Parque") apareçam em pesquisas diretas.',
+    testimonial: '"Seus pontos turísticos encontrados por quem procura."',
+    author: 'Busca Orgânica',
+    image: '/jardimgramado.png',
+    link: '#'
+  },
+  {
+    client: 'Engajamento e Conversão',
+    type: 'Resultados',
+    desc: 'Permita que o público avalie e comente sobre cada atração individualmente. Mais interação e credibilidade aumentam a venda de ingressos.',
+    testimonial: '"Credibilidade e facilidade de navegação geram vendas."',
+    author: 'Conversão',
+    image: '/avaliacoes1.png',
+    link: '#'
+  }
+];
+---
+
+<section id="cases" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="mb-12">
+        <h3 class="text-primary font-bold text-sm uppercase tracking-wider mb-2">VANTAGENS COMPETITIVAS</h3>
+        <h2 class="text-3xl md:text-4xl font-bold text-black">Por que Mapear seu Parque?</h2>
+        <p class="text-gray-600 mt-4 max-w-2xl">Descubra como a otimização de geolocalização transforma a experiência do visitante e os resultados do seu negócio.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {cases.map((item) => (
+        <div class="bg-white shadow-lg rounded-2xl overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow">
+          <div class="h-48 overflow-hidden relative">
+            <img src={item.image} alt={item.client} class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+            <div class="absolute top-4 left-4 bg-black/70 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+              {item.type}
+            </div>
+          </div>
+          
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-bold mb-2 text-gray-900">{item.client}</h3>
+            <p class="text-gray-600 mb-6 text-sm flex-grow">{item.desc}</p>
+            
+            <div class="bg-gray-50 p-4 rounded-xl mb-6 relative">
+              <svg class="w-8 h-8 text-gray-300 absolute -top-3 -left-2 transform -scale-x-100" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+              </svg>
+              <p class="text-gray-700 italic text-sm relative z-10 pl-2">{item.testimonial}</p>
+              <p class="text-xs text-gray-500 mt-2 font-bold text-right">— {item.author}</p>
+            </div>
+
+            <a href={item.link} class="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-white border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-colors uppercase text-sm tracking-wider group">
+              Saiba Mais
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

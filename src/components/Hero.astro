@@ -1,0 +1,57 @@
+---
+---
+<section class="relative h-[100dvh] w-full overflow-hidden bg-transparent">
+  <!-- Poster Image (Visible initially, fades out when video plays) -->
+  <div id="hero-poster" class="fixed inset-0 -z-20 transition-opacity duration-1000 ease-in-out">
+    <img 
+      src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop" 
+      alt="Background" 
+      class="w-full h-full object-cover opacity-80"
+    />
+    <div class="absolute inset-0 bg-black/40"></div>
+  </div>
+
+  <!-- Local Video Background -->
+  <div class="fixed inset-0 pointer-events-none -z-30">
+    <div class="absolute inset-0 overflow-hidden bg-black">
+      <video 
+        class="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2 opacity-60"
+        autoplay 
+        muted 
+        loop 
+        playsinline
+      >
+        <source src="/passeandoparque.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  
+  <!-- Content Overlay -->
+  <div class="fixed inset-0 bg-black/40 -z-10 pointer-events-none"></div>
+  
+  <!-- Content -->
+  <div class="container mx-auto px-4 h-full flex flex-col justify-center relative z-10 text-white">
+    <h1 class="text-5xl md:text-7xl font-bold mb-4">Destaque sua Atração no Google</h1>
+    <p class="text-xl md:text-2xl mb-8 font-light">Especialistas em Geolocalização e Presença Digital para Parques e Turismo</p>
+    <a href="#sobre" class="bg-primary hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full inline-block w-fit transition-colors uppercase tracking-wider text-sm pointer-events-auto">
+      Potencialize sua Visibilidade
+    </a>
+  </div>
+
+  <script>
+    // Simple script to fade out the poster after a few seconds
+    // This gives time for the YouTube video to load and start playing
+    window.addEventListener('load', () => {
+      const poster = document.getElementById('hero-poster');
+      if (poster) {
+        setTimeout(() => {
+          poster.style.opacity = '0';
+          // After fade out, hide it completely
+          setTimeout(() => {
+            poster.style.display = 'none';
+          }, 1000);
+        }, 3500); // 3.5 seconds delay (adjust as needed for typical load times)
+      }
+    });
+  </script>
+</section>
