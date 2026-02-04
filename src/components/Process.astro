@@ -30,15 +30,18 @@ const steps = [
         <h2 class="text-3xl md:text-4xl font-bold text-black">Estratégia de Implementação</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
       {steps.map((item) => (
-        <div class="flex flex-col group">
-          <div class="h-64 overflow-hidden mb-6 rounded-2xl shadow-md">
-             <img src={item.image} alt={item.step} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        <div class="flex flex-col md:flex-row gap-6 items-start group">
+          <div class="w-full md:w-32 h-32 shrink-0 rounded-2xl overflow-hidden shadow-sm relative">
+             <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300 z-10"></div>
+             <img src={item.image} alt={item.step} class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
           </div>
-          <h3 class="text-xl font-bold mb-2">{item.step}</h3>
-          <p class="text-gray-600 mb-4">{item.desc}</p>
           
+          <div class="flex-1">
+            <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors">{item.step}</h3>
+            <p class="text-gray-600 leading-relaxed text-sm">{item.desc}</p>
+          </div>
         </div>
       ))}
     </div>

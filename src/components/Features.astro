@@ -3,17 +3,17 @@ const cases = [
   {
     client: 'Maior Visibilidade',
     type: 'Alcance',
-    desc: 'Cada atração do seu parque aparecerá como resultado de pesquisa relevante no Google Maps, saindo da sombra da vegetação fechada.',
-    testimonial: '"Atrações visíveis individualmente facilitam a descoberta."',
+    desc: 'Cada atração do seu parque passa a ter presença individual no Google Maps, aparecendo de forma clara e organizada nos resultados de busca, com localização precisa e informações relevantes.',
+    testimonial: '"Atrações bem posicionadas facilitam a descoberta e a navegação."',
     author: 'Google Maps',
     image: '/visibilidade.png',
     link: '#'
   },
   {
-    client: 'SEO Orgânico',
+    client: 'SEO Orgânico Local',
     type: 'Ranqueamento',
-    desc: 'Domine as buscas locais. Garanta que suas atrações específicas (ex: "Cachoeira do Parque") apareçam em pesquisas diretas.',
-    testimonial: '"Seus pontos turísticos encontrados por quem procura."',
+    desc: 'Fortaleça seu posicionamento nas buscas locais. Suas atrações específicas passam a ser encontradas em pesquisas direcionadas, como “cachoeira”, “trilha” ou “ponto turístico”, diretamente no Google Maps.',
+    testimonial: '"Seus pontos turísticos encontrados por quem realmente procura."',
     author: 'Busca Orgânica',
     image: '/jardimgramado.png',
     link: '#'
@@ -21,8 +21,8 @@ const cases = [
   {
     client: 'Engajamento e Conversão',
     type: 'Resultados',
-    desc: 'Permita que o público avalie e comente sobre cada atração individualmente. Mais interação e credibilidade aumentam a venda de ingressos.',
-    testimonial: '"Credibilidade e facilidade de navegação geram vendas."',
+    desc: 'Permita que visitantes avaliem, comentem e interajam com cada atração individualmente. Mais informação gera mais confiança, melhora a experiência e impulsiona decisões de visita e consumo.',
+    testimonial: '"Credibilidade e clareza aumentam a conversão."',
     author: 'Conversão',
     image: '/avaliacoes1.png',
     link: '#'
@@ -34,16 +34,16 @@ const cases = [
   <div class="container mx-auto px-4">
     <div class="mb-12">
         <h3 class="text-primary font-bold text-sm uppercase tracking-wider mb-2">VANTAGENS COMPETITIVAS</h3>
-        <h2 class="text-3xl md:text-4xl font-bold text-black">Por que Mapear seu Parque?</h2>
-        <p class="text-gray-600 mt-4 max-w-2xl">Descubra como a otimização de geolocalização transforma a experiência do visitante e os resultados do seu negócio.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-black">Por que mapear seu parque no Google Maps?</h2>
+        <p class="text-gray-600 mt-4 max-w-2xl">Descubra como uma estratégia inteligente de geolocalização e SEO Maps amplia a experiência do visitante e fortalece os resultados do seu parque.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {cases.map((item) => (
-        <div class="bg-white shadow-lg rounded-2xl overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow">
-          <div class="h-48 overflow-hidden relative">
-            <img src={item.image} alt={item.client} class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-            <div class="absolute top-4 left-4 bg-black/70 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+        <div class="bg-white shadow-lg rounded-2xl overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow border border-gray-100">
+          <div class="h-48 overflow-hidden relative p-8 bg-white flex items-center justify-center">
+            <img src={item.image} alt={item.client} class="w-full h-full object-contain transition-transform duration-500 hover:scale-105" />
+            <div class="absolute top-4 left-4 bg-gray-50 text-gray-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-gray-200">
               {item.type}
             </div>
           </div>
